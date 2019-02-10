@@ -14,17 +14,9 @@
     <header>
         <h1><a href="index.php">Новости</a></h1>
     </header>
-    <main>
-        <?php foreach($this->data['news'] as $article) { ?>
-            <div class="article">
-                <h2 class="article__title">
-                    <a href="article.php?id=<?php echo $article->id ?>"><?php echo $article->title; ?></a>
-                </h2>
-                <div class="article__content">
-                    <?php echo $article->content; ?>
-                </div>
-            </div>
-        <?php } ?>
+    <main class="article">
+        <h2 class="article__title"><?php echo $this->data['article']->title; ?></h2>
+        <div class="article__content"><?php echo $this->data['article']->content; ?></div>
     </main>
 </body>
 </html>

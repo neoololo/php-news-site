@@ -20,10 +20,11 @@ class Db
             $config['password']);
     }
 
-    public function query($sql, $class) {
+    public function query($sql, $data = [], $class) {
         $sth = $this->dbh->prepare($sql);
-        $sth->execute();
+        $sth->execute($data);
 
         return $sth->fetchAll(\PDO::FETCH_CLASS, $class);
     }
+
 }

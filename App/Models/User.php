@@ -17,6 +17,6 @@ class User extends Model
     public static function findAll() {
         $db = new \App\Db();
 
-        return $db->query('SELECT * FROM users', static::class);
+        return $db->query('SELECT * FROM users', [],static::class);
     }
 }
